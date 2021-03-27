@@ -2,6 +2,7 @@ package com.example.todo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -25,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                txt.setText("clicked");
+                System.out.println("clicked btn");
+
+                Intent activity2Intent = new Intent(getApplicationContext(), EditingActivity.class);
+                startActivity(activity2Intent);
 
             }
         });
